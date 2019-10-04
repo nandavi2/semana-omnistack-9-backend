@@ -1,7 +1,16 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const routes = require("./routes");
 
 const app = express();
+
+mongoose.connect(
+  "mongodb+srv://oministack:oministack@omnistack-9w9rr.mongodb.net/semana?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
+);
 
 // GET, POST, PUT, DELETE
 
